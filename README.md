@@ -5,7 +5,7 @@ Code Unnati Capstone Project
 <br />
 Mr. Sumith Sunil Saratale
 <br />
-# Team Members :
+# Team Members:
 <br />
 Harshitha Annam
 <br />
