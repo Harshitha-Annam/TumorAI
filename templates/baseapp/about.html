@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+{% extends "baseapp/base.html" %}
+{% load static %}
+
+{%  block title %}
+TumorAI
+{% endblock %}
+{% block css %}{%  static 'css/about.css' %}{% endblock css %}
+{% block body %}
+    
+<div class="index-container">
+    <h1>Welcome to <span>Tumor</span>AI</h1>
+    {% comment %} <div class="btns"> {% endcomment %}
+    {% comment %} <a href="/about" class = "view">About</a>
+    <a href="/upload" class="add">Upload</a> {% endcomment %}
+    {% comment %} <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Image</button>
+    </form> {% endcomment %}
+
+    {% comment %} {% if form.instance.image %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ form.instance.image.url }}" alt="Uploaded Image">
+        {% if prediction %}
+            <h3>Prediction: {{ result_class }}</h3>
+        {% endif %}
+    {% endif %}
+    </div> {% endcomment %}
+    <section class="about-section">
+        <div class="container">
+            <h1>About the Brain Tumor Detection and Classification System</h1>
+            <p>This Brain Tumor Detection and Classification System is a machine learning-based tool that helps in the early diagnosis of brain tumors. Using advanced image processing techniques, it analyzes brain MRI scans to detect and classify tumors, enabling quicker and more accurate diagnoses.</p>
+
+            <h2>Purpose</h2>
+            <p>The primary objective of this system is to provide healthcare professionals with a reliable and efficient tool for detecting brain tumors in MRI scans. It reduces the time and effort required for diagnosis, ensuring that patients receive timely medical attention.</p>
+
+            <h2>Technology</h2>
+            <p>The system utilizes state-of-the-art techniques like convolutional neural networks (CNNs) and other deep learning models to process medical images. By training on large datasets of brain scans, the system can identify patterns in the images that may not be easily detectable by the human eye.</p>
+
+            <h2>How It Works</h2>
+            <ol>
+                <li>The user uploads an MRI scan of the brain.</li>
+                <li>The system preprocesses the image, enhancing features and removing noise.</li>
+                <li>Deep learning models analyze the image to identify and classify any potential tumors.</li>
+                <li>The result is displayed, indicating the presence, location, and type of tumor.</li>
+            </ol>
+
+            <h2>Benefits</h2>
+            <ul>
+                <li>Early detection of brain tumors, leading to faster treatment.</li>
+                <li>Improved accuracy in diagnosis with reduced human error.</li>
+                <li>Non-invasive and automated process, making it convenient for patients and healthcare providers.</li>
+                <li>Accessible for healthcare facilities with limited resources or specialists.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Brain Tumor Detection and Classification System</p>
+    </footer>
+</div>
+
+
+
+{% endblock %}

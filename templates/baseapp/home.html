@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% extends "baseapp/base.html" %}
+{% load static %}
+{%  block title %}
+TumorAI
+{% endblock %}
+
+{% block body %}
+    
+<div class="index-container">
+    {% comment %} <h1>Welcome to <span>Tumor</span>AI</h1> {% endcomment %}
+    <div class="btns">
+    {% comment %} <a href="/about" class = "view">About</a>
+    <a href="/upload" class="add">Upload</a> {% endcomment %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload Image</button>
+    </form>
+    <div class="contain-result">
+        <div class="contain-image">
+    {% if form.instance.image %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ form.instance.image.url }}" alt="Uploaded Image">
+        </div>
+        <div class="contain-pred">
+        {% comment %} {% if prediction %} {% endcomment %}
+            <h3>Prediction: </h3>
+            
+            <h2>{{ result_class }}</h2>
+        {% comment %} {% endif %} {% endcomment %}
+        </div>
+    {% endif %}
+    </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
