@@ -4,7 +4,7 @@ Code Unnati Capstone Project
 <br />
 ***Project Mentor:***
 <br />
-Mr. Sumith Sunil Saratale
+Mr. Sumit Sunil Saratale
 <br />
 <br />
 <br />
